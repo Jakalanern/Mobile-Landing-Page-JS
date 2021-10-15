@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* THIS BACKUP IS BEFORE CHANGING TO A TRANSFORM TRANSITION FOR BURGER INSTEAD OF AN OPACITY TRANSITION*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(49, 49, 49)
+}
+
+@media (min-width: 750px) {
+
+    /* Make mobile-nav dissapear if someone drags width to be greater than mobile sizing */
+
+    .mobile-nav,
+    .mobile-nav section,
+    .mobile-nav .text,
+    .x {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 750px) {
+    /* Nav Layout */
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    nav img {
+        margin-right: 2em;
+    }
+
+    /* Burger */
+    .burger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .burger .line {
+        width: 15px;
+        background: gray;
+        padding: 2px 10px;
+        margin: 3px 0;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: 1em;
+    }
+
+    .burger:hover {
+        cursor: pointer;
+    }
+
+    /* Popout mobile nav */
+    .mobile-nav {
+        visibility: visible;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: rgb(58, 58, 58);
+        padding: 2rem;
+        padding-top: 1.25rem;
+        transition: visibility 0s, opacity .5s linear;
+    }
+
+    .mobile-nav section {
+        display: flex;
+        flex-direction: row;
+        transition: visibility 0s, opacity .5s linear;
+    }
+
+    .mobile-nav h2 {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-nav li {
+        color: rgba(255, 255, 255, 0.411);
+        font-weight: 500;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    .mobile-nav li:hover,
+    .mobile-nav li:focus {
+        text-decoration: underline;
+    }
+
+    /* X to close */
+
+    .x {
+        display: flex;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        padding: .25em;
+        padding-top: 0;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 2.8em;
+        color: rgba(255, 255, 255, 0.411);
+        transform: scaleX(140%);
+    }
+
+    .x:hover {
+        cursor: pointer;
+    }
+}
