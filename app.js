@@ -1,3 +1,4 @@
+// Selections
 const mobileNav = document.querySelector(".mobile-nav")
 const mobileNavSection = document.querySelector(".mobile-nav section")
 const mobileNavLi = document.querySelectorAll(".mobile-nav section li")
@@ -9,8 +10,10 @@ const l2 = document.querySelector("#l2")
 const l3 = document.querySelector("#l3")
 const l4 = document.querySelector("#l4")
 
+//Hide dropdown NAV
 mobileNav.style.visibility = "hidden"
 
+//On burger click, show dropdown NAV
 burger.addEventListener("click", () => {
     mobileNav.style.visibility = "visible"
     mobileNav.style.opacity = "1"
@@ -21,7 +24,7 @@ burger.addEventListener("click", () => {
     mobileNav.style.transform = "translateY(0px)"
 })
 
-
+//On X click, close dropdown NAV
 x.addEventListener("click", () => {
     mobileNav.style.transform = "translateY(-500px)"
     for (let li of mobileNavLi) {
