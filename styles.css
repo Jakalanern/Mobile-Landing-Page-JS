@@ -80,6 +80,11 @@ body {
 /* This query is for when we exit mobile sizing; do 'something'. */
 @media (min-width: 750px) {
 
+    /* Center the browser logos once we expand to a non mobile sizing */
+    .item-v2 {
+        margin-left: 2em;
+    }
+
     /* Hide the ethereum logo when we exit mobile sizing */
 
     .ethereum-box img {
@@ -445,12 +450,40 @@ body {
         color: var(--clr-fadewhite)
     }
 
-    /* ================ */
+    .info-box-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
+    .info-box-4 h1 {
+        color: rgba(255, 255, 255, 0.952);
+        font-size: 3rem;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+        max-width: 1000px;
+        margin-left: .25em;
+        margin-right: .25em;
+    }
+
+    .info-box-4 p {
+        font-size: 1.3rem;
+        padding: 1.5rem;
+        padding-top: 0rem;
+        line-height: 1.4em;
+        max-width: 450px;
+        min-width: 325px;
+        color: var(--clr-fadewhite)
+    }
+
+
+    /* ================ */
     .items {
         position: relative;
         width: 100%;
-        overflow-x: scroll;
+        overflow-x: hidden;
         overflow-y: hidden;
         white-space: nowrap;
         transition: all 0.2s;
@@ -458,20 +491,25 @@ body {
         will-change: transform;
         user-select: none;
         cursor: pointer;
+
     }
 
     .item {
         display: inline-block;
         background: var(--clr-fadeblack);
         min-height: 250px;
-        min-width: 400px;
+        min-width: 275px;
         margin: 2em 1em;
         border-radius: 1em;
+        text-align: left;
 
-        @media screen and (max-width: 500px) {
-            min-height: 200px;
-            min-width: 200px;
-        }
+    }
+
+    .item-v2 {
+        display: inline-block;
+        cursor: pointer;
+        padding-right: 0;
+        padding-left: 3em;
     }
 
     .item-box {
@@ -525,7 +563,6 @@ body {
         display: inline-block;
         letter-spacing: .15em;
         line-height: 1.5em;
-
     }
 
     .item-box-2 p {
@@ -539,8 +576,58 @@ body {
         padding: 0;
     }
 
+    .item2 {
+        margin: 0 auto;
+    }
+
+    .item2-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2em;
+        margin-bottom: 10em;
+        margin: 2em 4em 10em 2em
+    }
+
+
+
+    .item2 img {
+        /* Browser Image */
+        width: 150px;
+        margin-bottom: 2em;
+    }
+
+    .item2 button {
+        padding: 1em 2em;
+        border-radius: 2em;
+        border: none;
+        background: rgb(61, 61, 61);
+        color: white;
+        font-weight: 900;
+        font-size: 1rem;
+        min-width: 125px;
+        max-width: 175px;
+        cursor: pointer;
+
+    }
+
 }
 
+@media (min-width: 350px) {
+    .item2-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2em;
+        margin-bottom: 10em;
+        margin-right: 4em;
+        margin-left: 0;
+    }
+
+    .item2-wrapper:nth-of-type(4) {
+        margin-right: 0;
+    }
+}
 
 /* This is here to make sure the H1's look good at some awkward widths */
 @media (min-width: 250px) and (max-width: 470px) {

@@ -9,7 +9,7 @@ const l1 = document.querySelector("#l1")
 const l2 = document.querySelector("#l2")
 const l3 = document.querySelector("#l3")
 const l4 = document.querySelector("#l4")
-const slider = document.querySelector('.items');
+const slider = document.querySelectorAll('.items');
 
 let isDown = false;
 let startX;
@@ -41,25 +41,54 @@ x.addEventListener("click", () => {
     l4.style.transform = "translateX(200px)"
 })
 
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-});
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 1; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk;
-    console.log(walk);
-});
+// Sliding Twitter Feed
+for (let s of slider) {
+    s.addEventListener('mousedown', (e) => {
+        isDown = true;
+        s.classList.add('active');
+        startX = e.pageX - s.offsetLeft;
+        scrollLeft = s.scrollLeft;
+    });
+    s.addEventListener('mouseleave', () => {
+        isDown = false;
+        s.classList.remove('active');
+    });
+    s.addEventListener('mouseup', () => {
+        isDown = false;
+        s.classList.remove('active');
+    });
+    s.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - s.offsetLeft;
+        const walk = (x - startX) * 1.5; //scroll-fast
+        s.scrollLeft = scrollLeft - walk;
+        console.log(walk);
+    });
+}
+
+
+//Sliding Browser Selection
+
+// s.addEventListener('mousedown', (e) => {
+//     isDown = true;
+//     s.classList.add('active');
+//     startX = e.pageX - s.offsetLeft;
+//     scrollLeft = s.scrollLeft;
+// });
+// s.addEventListener('mouseleave', () => {
+//     isDown = false;
+//     s.classList.remove('active');
+// });
+// s.addEventListener('mouseup', () => {
+//     isDown = false;
+//     s.classList.remove('active');
+// });
+// s.addEventListener('mousemove', (e) => {
+//     if (!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - s.offsetLeft;
+//     const walk = (x - startX) * 1.5; //scroll-fast
+//     s.scrollLeft = scrollLeft - walk;
+//     console.log(walk);
+// });
