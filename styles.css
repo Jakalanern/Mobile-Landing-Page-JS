@@ -521,8 +521,13 @@ body {
     .item-v2 {
         display: inline-block;
         cursor: pointer;
+        max-height: 350px;
         padding-right: 0;
         padding-left: 3em;
+    }
+
+    .browser-box {
+        margin-bottom: -2em;
     }
 
     .item-box {
@@ -598,9 +603,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 2em;
-        margin-bottom: 10em;
-        margin: 2em 4em 10em 2em
+        margin: 2em 4em 0em 2em;
     }
 
 
