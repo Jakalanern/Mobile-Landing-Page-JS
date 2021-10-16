@@ -655,6 +655,10 @@ body {
         list-style: none;
     }
 
+    footer ul:nth-of-type(3) {
+        margin-right: 2em;
+    }
+
     footer li {
         color: var(--clr-fadewhite);
         margin: .5em 0em;
