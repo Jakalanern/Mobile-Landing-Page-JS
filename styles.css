@@ -545,6 +545,7 @@ body {
     }
 
     .item1 {
+        max-width: 400px;
         padding: 2em;
         margin-top: 1.5em;
     }
