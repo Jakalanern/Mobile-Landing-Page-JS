@@ -10,16 +10,27 @@ const l2 = document.querySelector("#l2")
 const l3 = document.querySelector("#l3")
 const l4 = document.querySelector("#l4")
 const slider = document.querySelectorAll('.items');
+const scrollButton = document.querySelector("#scroll-button")
+const allImgs = document.querySelectorAll("img")
 
 let isDown = false;
 let startX;
 let scrollLeft;
 
+// Scroll to Top
+scrollButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
+})
+
 //Hide dropdown NAV
 mobileNav.style.visibility = "hidden"
 
 //On burger click, show dropdown NAV
-burger.addEventListener("click", () => {
+burger.addEventListener("click", function () {
     mobileNav.style.visibility = "visible"
     mobileNav.style.opacity = "1"
     for (let li of mobileNavLi) {
@@ -63,6 +74,5 @@ for (let s of slider) {
         const x = e.pageX - s.offsetLeft;
         const walk = (x - startX) * 1.25; //scroll-fast
         s.scrollLeft = scrollLeft - walk;
-        console.log(walk);
     });
 }

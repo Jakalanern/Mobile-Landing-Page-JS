@@ -12,6 +12,10 @@
     --clr-bg: rgb(39, 39, 39);
 }
 
+.scroll-img {
+    z-index: -1;
+}
+
 ::-webkit-scrollbar {
     height: 4px;
     width: 4px;
@@ -41,7 +45,6 @@ body {
 
 .head {
     display: none;
-
 }
 
 /* ======================= */
@@ -163,8 +166,7 @@ body {
     /* Popout mobile nav */
 
     .mobile-nav {
-        visibility: visible;
-        opacity: 0;
+        transition: visibility 0s, opacity .25s, transform .3s ease;
         position: absolute;
         top: 0;
         width: 100%;
@@ -173,7 +175,6 @@ body {
         padding-top: 1.25rem;
         padding-bottom: 1.25rem;
         padding-right: 0;
-        transition: visibility 0s, opacity .25s linear, transform .3s ease;
         transform: translateY(-500px);
     }
 
@@ -524,6 +525,11 @@ body {
         max-height: 350px;
         padding-right: 0;
         padding-left: 3em;
+        transition: transform .5s;
+    }
+
+    .item-v2:hover {
+        transform: scale(1.025)
     }
 
     .browser-box {
@@ -606,8 +612,6 @@ body {
         margin: 2em 4em 0em 2em;
     }
 
-
-
     .item2 img {
         /* Browser Image */
         width: 150px;
@@ -625,7 +629,12 @@ body {
         min-width: 125px;
         max-width: 175px;
         cursor: pointer;
+        transition: background .25s linear, border .75s ease;
+    }
 
+    .item2 button:hover {
+        background: rgba(0, 0, 0, 0.055);
+        border: .25px solid var(--clr-accenthover)
     }
 
     footer {
@@ -715,11 +724,11 @@ body {
     }
 
     #scroll-button {
-        padding: .5em;
-        padding: .5em .75em .5em .75em;
-        margin-top: 1em;
-        background-color: white;
-        border: 1px solid rgba(0, 0, 0, 0.575);
+        padding: .75em 2em;
+        margin-top: 2em;
+        background-color: transparent;
+        color: var(--clr-white);
+        border: 1px solid var(--clr-white);
         border-radius: 20px;
         transition: transform .25s;
         margin-bottom: 2em;
@@ -727,7 +736,7 @@ body {
 
     #scroll-button:hover {
         cursor: pointer;
-        background-color: rgb(231, 231, 231);
+        background-color: rgba(0, 0, 0, 0.541);
         transform: translateY(-2px)
     }
 
