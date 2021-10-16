@@ -8,6 +8,8 @@
     --clr-accenthover: rgba(93, 76, 245, 0.808);
     --clr-fadewhite: rgba(255, 255, 255, 0.459);
     --clr-fadeblack: rgba(0, 0, 0, 0.226);
+    --clr-white: rgba(255, 255, 255, 0.877);
+    --clr-bg: rgb(39, 39, 39);
 }
 
 html,
@@ -17,7 +19,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(49, 49, 49)
+    background-color: var(--clr-bg);
 }
 
 *,
@@ -64,7 +66,7 @@ body {
     padding: 0em .6em;
     padding-top: 1em;
     font-size: 1.5rem;
-    color: white;
+    color: var(--clr-white);
     margin: 0;
 }
 
@@ -175,7 +177,7 @@ body {
     }
 
     .mobile-nav h2 {
-        color: white;
+        color: var(--clr-white);
         font-size: 1.5rem;
         margin: 0;
         margin-bottom: 1.5rem;
@@ -256,7 +258,7 @@ body {
     }
 
     .head h1 {
-        color: rgba(255, 255, 255, 0.952);
+        color: var(--clr-white);
         font-size: 3rem;
         margin-bottom: 0;
         max-width: 1000px;
@@ -285,7 +287,7 @@ body {
     }
 
     .head button {
-        color: white;
+        color: var(--clr-white);
         padding: .75em 1.15em;
         font-size: 1.15rem;
         font-weight: 900;
@@ -317,7 +319,7 @@ body {
     .info-box h2 {
         padding: 2.5rem 2rem;
         font-size: 2.25em;
-        color: white;
+        color: var(--clr-white);
         margin: 0;
     }
 
@@ -348,7 +350,7 @@ body {
     }
 
     .info-box-2 h1 {
-        color: rgba(255, 255, 255, 0.952);
+        color: var(--clr-white);
         font-size: 3rem;
         margin-top: 2em;
         margin-bottom: 0;
@@ -391,7 +393,7 @@ body {
     }
 
     .ethereum-box h1 {
-        color: white;
+        color: var(--clr-white);
         margin: 0;
         padding-top: 1em;
         font-size: 1.8em;
@@ -431,7 +433,7 @@ body {
     }
 
     .info-box-3 h1 {
-        color: rgba(255, 255, 255, 0.952);
+        color: var(--clr-white);
         font-size: 3rem;
         margin-top: 1.5em;
         margin-bottom: 0;
@@ -459,7 +461,7 @@ body {
     }
 
     .info-box-4 h1 {
-        color: rgba(255, 255, 255, 0.952);
+        color: var(--clr-white);
         font-size: 3rem;
         margin-top: 1.5em;
         margin-bottom: 0;
@@ -485,6 +487,7 @@ body {
         width: 100%;
         overflow-x: hidden;
         overflow-y: hidden;
+        color: var(--clr-white);
         white-space: nowrap;
         transition: all 0.2s;
         transform: scale(0.98);
@@ -541,7 +544,7 @@ body {
 
     .item1 .name {
         margin-bottom: .25em;
-        color: white;
+        color: rgba(255, 255, 255, 0.788);
         position: relative;
     }
 
@@ -566,6 +569,7 @@ body {
     }
 
     .item-box-2 p {
+        color: var(--clr-white);
         white-space: normal;
     }
 
@@ -602,13 +606,112 @@ body {
         border-radius: 2em;
         border: none;
         background: rgb(61, 61, 61);
-        color: white;
+        color: var(--clr-white);
         font-weight: 900;
         font-size: 1rem;
         min-width: 125px;
         max-width: 175px;
         cursor: pointer;
 
+    }
+
+    footer {
+        background: rgb(31, 31, 31);
+        color: var(--clr-white);
+    }
+
+    footer h1 {
+        letter-spacing: 1.5px;
+        padding-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .foot-head-wrapper {
+        margin-left: 2.5em;
+        margin-bottom: 2em;
+    }
+
+    .foot-head-wrapper h3 {
+        font-weight: 400;
+        color: var(--clr-fadewhite)
+    }
+
+    footer h2 {
+        color: var(--clr-white);
+        margin: 0;
+        font-size: 1.3em;
+    }
+
+    .ul-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2em;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 25%;
+        list-style: none;
+    }
+
+    footer li {
+        color: var(--clr-fadewhite);
+        margin: .5em 0em;
+        font-weight: 700;
+    }
+
+    .social-logo {
+        width: 45px;
+        height: 45px;
+        margin: .25em .5em 0 .5em;
+        transition: transform .25s;
+    }
+
+    .social-logo:hover {
+        cursor: pointer;
+        transform: translateY(-4px)
+    }
+
+    .company {
+        letter-spacing: 5px;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        margin-top: 1em;
+    }
+
+    .JS-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+        padding: 2em 1em 0em 1em;
+        border-top: 2px solid var(--clr-bg);
+        text-align: center;
+    }
+
+    .JS-footer a {
+        text-decoration: none;
+    }
+
+    #scroll-button {
+        padding: .5em;
+        padding: .5em .75em .5em .75em;
+        margin-top: 1em;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.575);
+        border-radius: 20px;
+        transition: transform .25s;
+        margin-bottom: 2em;
+    }
+
+    #scroll-button:hover {
+        cursor: pointer;
+        background-color: rgb(231, 231, 231);
+        transform: translateY(-2px)
     }
 
 }

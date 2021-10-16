@@ -65,21 +65,21 @@ for (let s of slider) {
         s.scrollLeft = scrollLeft - walk;
         console.log(walk);
     });
-    s.addEventListener('touchstart', (e) => {
+    s.addEventListener('mousedown', (e) => {
         isDown = true;
         s.classList.add('active');
         startX = e.pageX - s.offsetLeft;
         scrollLeft = s.scrollLeft;
     });
-    s.addEventListener('touchend', () => {
+    s.addEventListener('mouseleave', () => {
         isDown = false;
         s.classList.remove('active');
     });
-    s.addEventListener('touchend', () => {
+    s.addEventListener('mouseup', () => {
         isDown = false;
         s.classList.remove('active');
     });
-    s.addEventListener('touch', (e) => {
+    s.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - s.offsetLeft;
