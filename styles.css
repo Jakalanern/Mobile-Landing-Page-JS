@@ -157,7 +157,7 @@ body {
         position: absolute;
         top: 0;
         width: 100%;
-        background-color: rgb(58, 58, 58);
+        background-color: rgb(47, 47, 47);
         padding: 2rem;
         padding-top: 1.25rem;
         padding-bottom: 1.25rem;
@@ -485,7 +485,6 @@ body {
     .items {
         position: relative;
         width: 100%;
-        overflow-x: hidden;
         overflow-y: hidden;
         color: var(--clr-white);
         white-space: nowrap;
