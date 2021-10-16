@@ -1,9 +1,13 @@
+/* ====== GLOBALS ====== */
+
+/* Importing google fonts 'Roboto' */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     --clr-accent: rgb(93, 76, 245);
     --clr-accenthover: rgba(93, 76, 245, 0.808);
     --clr-fadewhite: rgba(255, 255, 255, 0.459);
+    --clr-fadeblack: rgba(0, 0, 0, 0.226);
 }
 
 html,
@@ -22,25 +26,14 @@ body {
     box-sizing: border-box;
 }
 
-@media (min-width: 750px) {
-
-    /* Make mobile-nav dissapear if someone drags width to be greater than mobile sizing */
-
-    .mobile-nav,
-    .mobile-nav section,
-    .mobile-nav .text,
-    .x {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    /* ================ */
-}
-
 .head {
     display: none;
 
 }
+
+/* ======================= */
+
+/* GRID */
 
 .grid {
     display: flex;
@@ -81,8 +74,37 @@ body {
     color: var(--clr-fadewhite)
 }
 
+/* ======================= */
 
+/* MEDIA QUERY ON EXIT OF MOBILE SIZING */
+/* This query is for when we exit mobile sizing; do 'something'. */
+@media (min-width: 750px) {
+
+    /* Hide the ethereum logo when we exit mobile sizing */
+
+    .ethereum-box img {
+        display: none;
+    }
+
+    /* ======================= */
+
+    /* Make mobile-nav dissapear if someone drags width to be greater than mobile sizing */
+
+    .mobile-nav,
+    .mobile-nav section,
+    .mobile-nav .text,
+    .x {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    /* ======================= */
+}
+
+
+/* MEDIA QUERY MOBILE SIZING */
 @media (max-width: 750px) {
+
     /* Nav Layout */
 
     nav {
@@ -195,8 +217,6 @@ body {
     .mobile-nav section li:nth-of-type(4) {
         transform: translateX(400px);
     }
-
-    /* ================ */
 
     /* X to close */
 
@@ -345,6 +365,7 @@ body {
     /* ================ */
 
     /* Ethereum Box */
+
     .ethereum-box {
         display: flex;
         flex-direction: column;
@@ -352,9 +373,10 @@ body {
         align-items: center;
         text-align: center;
         background-color: var(--clr-accent);
-        margin: 1rem;
         border-radius: 1em;
         padding: 2em;
+        max-width: clamp(275px, 90%, 415px);
+        margin: 0 auto;
         margin-top: 5rem;
     }
 
@@ -406,7 +428,7 @@ body {
     .info-box-3 h1 {
         color: rgba(255, 255, 255, 0.952);
         font-size: 3rem;
-        margin-top: 2em;
+        margin-top: 1.5em;
         margin-bottom: 0;
         max-width: 1000px;
         margin-left: .25em;
@@ -424,9 +446,103 @@ body {
     }
 
     /* ================ */
+
+    .items {
+        position: relative;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .item {
+        display: inline-block;
+        background: var(--clr-fadeblack);
+        min-height: 250px;
+        min-width: 400px;
+        margin: 2em 1em;
+        border-radius: 1em;
+
+        @media screen and (max-width: 500px) {
+            min-height: 200px;
+            min-width: 200px;
+        }
+    }
+
+    .item-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .item1 {
+        padding: 2em;
+        margin-top: 1.5em;
+    }
+
+    .item1 img {
+        border-radius: 50%;
+        width: 47px;
+        height: 47px;
+    }
+
+    .item1 .user-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 1em;
+    }
+
+    .item1 .name {
+        margin-bottom: .25em;
+        color: white;
+        position: relative;
+    }
+
+    .item1 .handle {
+        color: var(--clr-fadewhite);
+        font-size: .8em;
+    }
+
+    .item1 img:nth-of-type(2) {
+        width: 35px;
+        height: 35px;
+        margin-left: auto;
+    }
+
+    .item-box-2 {
+        width: 100%;
+        font-size: 1.05em;
+        color: rgba(255, 255, 255, 0.836);
+        display: inline-block;
+        letter-spacing: .15em;
+        line-height: 1.5em;
+
+    }
+
+    .item-box-2 p {
+        white-space: normal;
+    }
+
+
+    .item-box-3 p {
+        color: var(--clr-fadewhite);
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
 
+/* This is here to make sure the H1's look good at some awkward widths */
 @media (min-width: 250px) and (max-width: 470px) {
     .head h1 {
         width: 300px;
