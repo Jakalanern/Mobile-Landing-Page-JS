@@ -12,6 +12,17 @@
     --clr-bg: rgb(39, 39, 39);
 }
 
+::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+    background: rgb(61, 61, 61);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: rgb(31, 31, 31);
+    border-radius: 10px;
+}
+
 html,
 body {
     height: 100%;

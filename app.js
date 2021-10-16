@@ -61,31 +61,8 @@ for (let s of slider) {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - s.offsetLeft;
-        const walk = (x - startX) * 1.5; //scroll-fast
+        const walk = (x - startX) * 1.25; //scroll-fast
         s.scrollLeft = scrollLeft - walk;
         console.log(walk);
     });
-    s.addEventListener('mousedown', (e) => {
-        isDown = true;
-        s.classList.add('active');
-        startX = e.pageX - s.offsetLeft;
-        scrollLeft = s.scrollLeft;
-    });
-    s.addEventListener('mouseleave', () => {
-        isDown = false;
-        s.classList.remove('active');
-    });
-    s.addEventListener('mouseup', () => {
-        isDown = false;
-        s.classList.remove('active');
-    });
-    s.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - s.offsetLeft;
-        const walk = (x - startX) * 1.5; //scroll-fast
-        s.scrollLeft = scrollLeft - walk;
-        console.log(walk);
-    });
-
 }
