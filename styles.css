@@ -629,7 +629,7 @@ body {
         min-width: 125px;
         max-width: 175px;
         cursor: pointer;
-        transition: background .25s linear, border .75s ease;
+        transition: background .25s linear, border .75s linear;
     }
 
     .item2 button:hover {
@@ -726,10 +726,11 @@ body {
     #scroll-button {
         padding: .75em 2em;
         margin-top: 2em;
+        font-size: 1rem;
         background-color: transparent;
         color: var(--clr-white);
         border: 1px solid var(--clr-white);
-        border-radius: 20px;
+        border-radius: 2em;
         transition: transform .25s;
         margin-bottom: 2em;
     }
