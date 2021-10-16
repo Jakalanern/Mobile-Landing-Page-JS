@@ -634,7 +634,7 @@ body {
 
     .item2 button:hover {
         background: rgba(0, 0, 0, 0.055);
-        border: .25px solid var(--clr-accenthover)
+        border: 2px solid var(--clr-accenthover)
     }
 
     footer {
