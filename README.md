@@ -1,3 +1,6 @@
 # Landing-Page-5
-Portfolio Stuffs | Custom Navbar with JS - Mobile First - Responsive
-*** Currently mobile ONLY - still WIP ***
+Custom Navbar with JS - Mobile First - Responsive
+
+X-axis scrolling elements
+Responsive Design
+Mobile First Design
