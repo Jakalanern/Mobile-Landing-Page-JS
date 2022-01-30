@@ -1,6 +1,8 @@
-# Landing-Page-5
-Custom Navbar with JS - Mobile First - Responsive
+Crypto Currency Responsive Website
 
-X-axis scrolling elements
+Custom Navbar w/ Javascript
+X-axis scrolling elements w/ Javascript
 Responsive Design
 Mobile First Design
+
+https://jakalanern.github.io/Mobile-Landing-Page-JS/
