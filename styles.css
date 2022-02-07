@@ -109,13 +109,13 @@ body {
 
   /* Make mobile-nav dissapear if someone drags width to be greater than mobile sizing */
 
-  .mobile-nav,
+  /* .mobile-nav,
   .mobile-nav section,
   .mobile-nav .text,
   .x {
     visibility: hidden;
     opacity: 0;
-  }
+  } */
 
   /* ======================= */
 }
